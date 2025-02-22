@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Layouts en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 1. Flow Layout */
+        .flow-layout {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* 2. Flexbox Layout */
+        .flex-layout {
+            display: flex;
+            justify-content: space-around;
+            background: #ffdd57;
+            padding: 20px;
+        }
+        .flex-layout div {
+            background: #fff;
+            padding: 10px;
+            width: 30%;
+            text-align: center;
+        }
+
+        /* 3. Grid Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: #57a6ff;
+            padding: 20px;
+        }
+        .grid-layout div {
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* 4. Float & Position Layout */
+        .float-layout {
+            background: #57ff9d;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .float-layout div {
+            width: 30%;
+            float: left;
+            background: #fff;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Flow Layout</h2>
+    <div class="flow-layout">
+        <p>Este es un ejemplo de como luce este documento.</p>
+        <p>Los elementos van a aparecer uno debajo del otro.</p>
+    </div>
+
+    <h2>2. Flexbox Layout</h2>
+    <div class="flex-layout">
+        <div>Inf-113</div>
+        <div>Inf-122</div>
+        <div>Inf-133</div>
+    </div>
+
+    <h2>3. Grid Layout</h2>
+    <div class="grid-layout">
+        <div>Progrmacion III</div>
+        <div>Base de datos I</div>
+        <div>Progrmacion web III</div>
+        <div>Estadistica II</div>
+        <div>Sistemas operativos</div>
+        <div>Metodologias de la investigacion</div>
+    </div>
+
+    <h2>4. Float & Position Layout</h2>
+    <div class="float-layout clearfix">
+        <div>Mineria de datos</div>
+        <div>Informatica Forense</div>
+        <div>Auditoria de sistemas</div>
+    </div>
+
+</body>
+</html>
